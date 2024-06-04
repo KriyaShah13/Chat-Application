@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<title>Chat | Room</title>
+	
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-sm-3 chat_people">
+		<h3 class="people">People</h3>
+		<div id="users">
+		</div>
+	</div>
+	<div class="col-sm-9" >
+		<div class="row chat_message">
+		<li id="messages">
+		
+	    </li>
+	</div>
+	<div class="row footer">
+		
+	<form id="message-box" class="form-inline">
+		<div class="form-group">
+		<input type="text" name="message" autofocus autocomplete="off" placeholder="Type your message here" class="input-chat"/>
+		<button type="submit" class="btn btn-info" style="margin-left:10px;">Send</button>
+		
+	</div>
+	</form>
+	<button id="send-location" class="btn btn-info" style="margin-left:10px;">Send Location</button>
+	
+</div>
+	</div>	
+	</div>
+</div>
+	 
+</body>
+<script src="/js/lib/moment.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/js/lib/mustache.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/socket.io/socket.io.js" ></script>
+<script src="js/lib/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="js/lib/deparam.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/chat.js"></script>
+
+<script id="message-template" type="text/template">
+	<li id="message_unit">
+		<div class="message_header">
+			<h4>{{from}}  <span>{{createAt}}</span></h4>
+			
+		</div>
+		<div class="message_body">
+			<p>{{text}}</p>
+		</div>
+	</li>
+
+</script>
+<script id="send_location" type="text/template">
+	<li id="location_unit">
+		<div class="message_header">
+			<h4>{{from}}  <span>{{createAt}}</span></h4>
+			
+		</div>
+		<div class="message_body">
+
+			<a target="_blank" href="{{url}}">My Current Location</a>
+		</div>
+	</li>
+
+	</script>
+</html>

@@ -1,0 +1,87 @@
+*
+{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+ 	
+}
+body
+{
+	overflow-y: hidden;
+}
+
+ul, li {
+  list-style-position: inside;
+}
+ .people{
+  font-weight:600;
+  text-align:center;
+  font-size: 1.5rem;
+  color:#d4d8dd;
+  margin-top: 2vh;
+
+}
+.chat_people
+{
+	  background-color:rgba(39,107,130,1);
+	  height: 100vh;
+}
+.chat_message
+{
+flex-grow: 1;
+  overflow-y: scroll;
+    height:89vh;
+  
+}
+.input-chat
+{
+	margin-left:15px;
+	padding:10px;
+	width:50vw;
+}
+#messages
+{
+	 list-style-type: none;
+	 margin:20px
+ }
+.footer
+{
+	
+	background-color:#d0d9db;
+	  display: flex;
+  padding: 10px;
+  /*height: 60px;*/
+  flex-shrink: 0;
+
+}
+.footer form
+{
+	flex-grow: 1;
+  display: flex;
+}
+.message_header {
+  display: flex;
+  margin-bottom: 5px;
+}
+.message_header h4
+{
+	font-weight:700;
+	font-size: 1em;
+	margin-right: 10px; 
+
+}
+.message_header span {
+  color: #999;
+}
+.message_body
+{
+font-size:0.85em;
+margin-bottom:10px;
+
+}
+/*Style for Index Page*/
+.box
+{
+	background-color: #dcdeea;
+	margin-top:25vh;
+	padding:20px;
+	border-radius:10px; 
+}
